@@ -29,6 +29,9 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 # Font Awesome
 gem "font-awesome-rails"
 
+# Simple_Form system for making beautiful forms
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
