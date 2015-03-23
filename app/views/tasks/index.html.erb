@@ -8,7 +8,7 @@
         <tr>
           <th>Tasks</th>
           <th>State</th>
-          <th colspan="3"></th>
+          <th colspan="4"></th>
         </tr>
       </thead>
 
@@ -20,6 +20,7 @@
             <td class="task_show"><%= link_to '<i class="fa fa-picture-o" title="View Task"></i>'.html_safe, task %></td>
             <td class="task_edit"><%= link_to '<i class="fa fa-pencil-square-o" title="Edit Task"></i>'.html_safe, edit_task_path(task) %></td>
             <td class="task_destroy"><%= link_to '<i class="fa fa-times" title="Destroy Task"></i>'.html_safe, task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to "Mark as Doing", change_task_path(task, state: "doing"), method: :put %></td>
           </tr>
         <% end %>
       </tbody>
@@ -34,7 +35,7 @@
         <tr>
           <th>Tasks</th>
           <th>State</th>
-          <th colspan="3"></th>
+          <th colspan="5"></th>
         </tr>
       </thead>
 
@@ -46,6 +47,8 @@
             <td class="task_show"><%= link_to '<i class="fa fa-picture-o" title="View Task"></i>'.html_safe, task %></td>
             <td class="task_edit"><%= link_to '<i class="fa fa-pencil-square-o" title="Edit Task"></i>'.html_safe, edit_task_path(task) %></td>
             <td class="task_destroy"><%= link_to '<i class="fa fa-times" title="Destroy Task"></i>'.html_safe, task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to "Mark as To Do", change_task_path(task, state: "to_do"), method: :put %></td>
+            <td><%= link_to "Mark as Done", change_task_path(task, state: "done"), method: :put %></td>
           </tr>
         <% end %>
       </tbody>
@@ -60,7 +63,7 @@
         <tr>
           <th>Tasks</th>
           <th>State</th>
-          <th colspan="3"></th>
+          <th colspan="4"></th>
         </tr>
       </thead>
 
@@ -72,6 +75,7 @@
             <td class="task_show"><%= link_to '<i class="fa fa-picture-o" title="View Task"></i>'.html_safe, task %></td>
             <td class="task_edit"><%= link_to '<i class="fa fa-pencil-square-o" title="Edit Task"></i>'.html_safe, edit_task_path(task) %></td>
             <td class="task_destroy"><%= link_to '<i class="fa fa-times" title="Destroy Task"></i>'.html_safe, task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to "Mark as Doing", change_task_path(task, state: "doing"), method: :put %></td>
           </tr>
         <% end %>
       </tbody>
