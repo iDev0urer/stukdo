@@ -1,4 +1,4 @@
-<!-- ß<tr>
+<!-- <tr>
 	<td class="task_content"><%= task.content %></td>
 	<td><%= task.state %></td>
 	<td class="task_show"><%= link_to '<i class="fa fa-picture-o" title="View Task"></i>'.html_safe, task %></td>
@@ -17,6 +17,8 @@
 	  <%= link_to edit_task_path(task) do %>
 	    Created <%= time_ago_in_words(task.created_at) %> ago
 	  <% end %>
+
+	  <%= link_to '<i class="fa fa-times"></i>'.html_safe, task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right text-danger" %>
   </div>
   <div class="panel-body">
     <%= task.content %>
