@@ -1,3 +1,22 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.task_table{
+ 
+    .task_content {
+        font-weight: 500;
+    }
+    .task_show {
+        width: 50px;
+    }
+    .task_edit {
+        width: 50px;
+    }
+    .task_destroy {
+        width: 50px;
+        a {
+            color: #b11212;
+        }
+    }
+}
